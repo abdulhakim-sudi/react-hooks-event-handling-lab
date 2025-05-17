@@ -28,3 +28,16 @@ class Customer:
         self._orders.append(order)
         coffee._add_order(order)
         return order
+@classmethod
+def most_aficionado(cls, coffee):
+    customers = coffee.customers()
+    if not customers:
+        return None
+    max_spent = 0
+    top_customer = None
+    for customer in customers:
+        total_spent = sum(order.price for order in customer.orders() if order.coffee == coffee)
+        if total_spent > max_spent:
+            max_spent = total_spent
+            top_customer = customer
+    return top_customer

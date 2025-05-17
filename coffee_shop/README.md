@@ -1,25 +1,24 @@
-# ☕ Coffee Shop Domain Model
+# Coffee Shop Domain Modeling
 
-## Overview
-This project models a Coffee Shop using Python and object-oriented programming principles.  
-It includes three main entities: Customers, Coffees, and Orders, demonstrating their relationships.
+This project models a Coffee Shop domain using Python OOP principles.
+
+## Entities
+
+- Customer
+- Coffee
+- Order
 
 ## Features
-- A Customer can place many Orders.
-- A Coffee can be ordered many times.
-- An Order links a Customer and a Coffee with a price.
-- Methods to track orders, customers, coffees, and stats like average price.
-- Validation and error handling for inputs.
 
-** Setup Instructions
+- Customers can place many orders.
+- Coffees can have many orders.
+- Orders link customers and coffees.
+- Data validation on inputs.
+- Methods to analyze coffee orders.
 
- Requirements
-- Python 3.8 or higher
-- Pipenv for dependency management
+## Setup
 
-**Getting Started
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/abdulhakim-sudi/coffee_shop.git
-   cd coffee_shop
+```bash
+pipenv install
+pipenv shell
+pipenv install pytest
